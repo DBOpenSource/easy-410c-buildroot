@@ -1,9 +1,11 @@
-Run "make" to download all the required dependencies, and boot into the
-rootfs under QEMU.
-
 The root password is root.
 
-Patches to libarchive.mk were required as the only working download
-was from github.
+Rum "make" to download all the required dependencies, and build the boot image
+for the DB410c
 
+Run "make qemu" to download all the required dependencies, and boot into the
+rootfs under QEMU.
+
+Patches to libarchive.mk were required as the only working download was from
+github.
 
