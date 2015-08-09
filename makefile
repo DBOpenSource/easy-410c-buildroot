@@ -93,3 +93,6 @@ db410c-linux/arch/arm64/boot/Image: db410c-linux $(CPIO)
 	sed -i "s#CONFIG_INITRAMFS_SOURCE=.*#CONFIG_INITRAMFS_SOURCE=\"$(CPIO)\"#" db410c-linux/.config
 	(cd db410c-linux && ARCH=arm64 make oldconfig)
 	(cd db410c-linux && CROSS_COMPILE=aarch64-linux-gnu- ARCH=arm64 make -j4 Image dtbs)
+
+clean:
+	[ -d buildroot.git ] && (cd buildroot.git && make clean && git checkout .)
