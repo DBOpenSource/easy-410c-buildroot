@@ -45,7 +45,7 @@ GCCDIR:=$(TOPDIR)/$(GCCVER)
 GCCBINDIR:=$(GCCDIR)/bin
 COMMIT=74e99ce3191b3b3f6a873c6673e582435cbb81ba
 
-all: db6410
+all: db410c
 
 # Get buildroot
 buildroot.git:
