@@ -8,8 +8,8 @@ TOPDIR:=$(dir $(abspath $(lastword $(MAKEFILE_LIST))))
 GCCVER:=gcc-linaro-aarch64-linux-gnu-4.9-2014.09_linux
 GCCDIR:=$(TOPDIR)$(GCCVER)
 GCCBINDIR:=$(GCCDIR)/bin
-#COMMIT=74e99ce3191b3b3f6a873c6673e582435cbb81ba
-COMMIT = "master"
+COMMIT=15a53b93a034af78c1a3d62510a2abe5a91e4f8f
+#COMMIT = "master"
 IMG_DIR=$(TOPDIR)db410c-linux/arch/arm64/boot
 BOOT_IMG:=$(TOPDIR)boot-db410c.img
 

@@ -1,6 +1,6 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# Buildroot 2015.08-rc1-00024-g74e99ce Configuration
+# Buildroot 2015.08-rc1-00062-g15a53b9-dirty Configuration
 #
 BR2_HAVE_DOT_CONFIG=y
 BR2_HOSTARCH_NEEDS_IA32_LIBS=y
@@ -522,6 +522,7 @@ BR2_PACKAGE_SSHFS=y
 #
 # BR2_PACKAGE_EVEMU is not set
 # BR2_PACKAGE_EVTEST is not set
+# BR2_PACKAGE_FAN_CTRL is not set
 # BR2_PACKAGE_FCONFIG is not set
 # BR2_PACKAGE_FIS is not set
 # BR2_PACKAGE_FMTOOLS is not set
