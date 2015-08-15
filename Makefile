@@ -48,7 +48,7 @@ $(GCCDIR)/.exists: $(DOWNLOAD_DIR)/.exists
 	touch $@
 
 # Make the rootfs
-$(ROOTFS_IMG): buildroot.git $(GCCDIR)/.complete buildroot_config $(FIRMWARE_UNPACK_DIR)/.unpacked
+$(ROOTFS_IMG): buildroot.git $(GCCDIR)/.exists buildroot_config $(FIRMWARE_UNPACK_DIR)/.unpacked
 	cp buildroot_config buildroot.git/.config
 	sed -i "s#BR2_TOOLCHAIN_EXTERNAL_PATH=.*#BR2_TOOLCHAIN_EXTERNAL_PATH=\"$(GCCDIR)\"#" buildroot.git/.config
 	(cd buildroot.git && git checkout $(COMMIT))
