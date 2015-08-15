@@ -23,6 +23,9 @@ FIRMWARE_DEST_DIR:=$(DOWNLOAD_DIR)
 ROOTFS_IMG:=$(TOPDIR)buildroot.git/output/images/rootfs.ext4
 IMAGE:=$(IMG_DIR)/Image
 DTB:=$(IMG_DIR)/dts/qcom/apq8016-sbc.dtb
+
+# Use the rules in db410c.mk to build the kernel
+BUILD_DEFAULT_KERNEL=1
 DB410C_KERNEL:=$(TOPDIR)/db410c-linux
 KERNEL_CONFIG:=$(TOPDIR)/db410c_config
 
