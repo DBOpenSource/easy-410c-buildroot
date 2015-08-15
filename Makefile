@@ -29,6 +29,8 @@ BUILD_DEFAULT_KERNEL=1
 DB410C_KERNEL:=$(TOPDIR)/db410c-linux
 KERNEL_CONFIG:=$(TOPDIR)/db410c_config
 
+FIRMWARE_UNPACK_DIR:=$(TOPDIR)firmware
+
 db410c_makefiles/db410c.mk:
 	git clone git@github.com:DBOpenSource/db410c_makefiles.git
 
@@ -46,7 +48,7 @@ $(GCCDIR)/.exists: $(DOWNLOAD_DIR)/.exists
 	touch $@
 
 # Make the rootfs
-$(ROOTFS_IMG): buildroot.git $(GCCDIR)/.complete buildroot_config
+$(ROOTFS_IMG): buildroot.git $(GCCDIR)/.complete buildroot_config $(FIRMWARE_UNPACK_DIR)/.unpacked
 	cp buildroot_config buildroot.git/.config
 	sed -i "s#BR2_TOOLCHAIN_EXTERNAL_PATH=.*#BR2_TOOLCHAIN_EXTERNAL_PATH=\"$(GCCDIR)\"#" buildroot.git/.config
 	(cd buildroot.git && git checkout $(COMMIT))
